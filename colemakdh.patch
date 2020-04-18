@@ -1,0 +1,58 @@
+diff -ruN fcitx-chewing.old/src/eim.c fcitx-chewing/src/eim.c
+--- fcitx-chewing.old/src/eim.c	2020-04-18 17:51:15.987767371 +1000
++++ fcitx-chewing/src/eim.c	2020-04-18 18:39:29.259686782 +1000
+@@ -83,7 +83,8 @@
+     "KB_DVORAK_HSU",
+     "KB_DACHEN_CP26",
+     "KB_HANYU_PINYIN",
+-    "KB_CARPALX"
++    "KB_CARPALX",
++    "KB_COLEMAKDH"
+ };
+ 
+ /**
+@@ -299,6 +300,7 @@
+ "aoeuhtn789",
+ "1234qweras",
+ "dstnaeo789",
++"arstgkneoi",
+ };
+ 
+ /**
+diff -ruN fcitx-chewing.old/src/fcitx-chewing.desc fcitx-chewing/src/fcitx-chewing.desc
+--- fcitx-chewing.old/src/fcitx-chewing.desc	2020-04-18 17:51:15.987767371 +1000
++++ fcitx-chewing/src/fcitx-chewing.desc	2020-04-18 17:50:27.007768736 +1000
+@@ -2,7 +2,7 @@
+ Type=Enum
+ Description=Selection Key
+ DefaultValue=1234567890
+-EnumCount=7
++EnumCount=8
+ Enum0=1234567890
+ Enum1=asdfghjkl;
+ Enum2=asdfzxcv89
+@@ -10,6 +10,7 @@
+ Enum4=aoeuhtn789
+ Enum5=1234qweras
+ Enum6=dstnaeo789
++Enum7=arstgkneio
+ 
+ [Chewing/AddPhraseForward]
+ Type=Boolean
+@@ -35,7 +36,7 @@
+ Type=Enum
+ Description=Keyboard Layout
+ DefaultValue=Default Keyboard
+-EnumCount=11
++EnumCount=12
+ Enum0=Default Keyboard
+ Enum1=Hsu's Keyboard
+ Enum2=IBM Keyboard
+@@ -47,6 +48,7 @@
+ Enum8=DACHEN_CP26 Keyboard
+ Enum9=Han-Yu PinYin Keyboard
+ Enum10=Carpalx Keyboard
++Enum11=Colemak DH Keyboard
+ 
+ [DescriptionFile]
+ LocaleDomain=fcitx-chewing
